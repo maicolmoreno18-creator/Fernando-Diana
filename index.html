@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#c8a96a" />
+  <meta name="description" content="Invitación de matrimonio de Fernando Morales & Diana Mongui — 15 de noviembre de 2026." />
+  <title>Fernando &amp; Diana · Nos casamos</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Parisienne&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================= -->
+  <!-- DEFINICIONES SVG (ornamentos florales reutilizables)          -->
+  <!-- ============================================================= -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false" width="0" height="0">
+    <defs>
+      <!-- ROSA REALISTA: pétalos en espiral, con centro y capas -->
+      <g id="rose">
+        <!-- pétalos exteriores -->
+        <path d="M0 14 C-13 12 -15 -4 -6 -12 C-1 -8 2 -3 2 2 C1 6 0 10 0 14 Z" fill="currentColor" opacity="0.42"/>
+        <path d="M0 14 C13 12 15 -4 6 -12 C1 -8 -2 -3 -2 2 C-1 6 0 10 0 14 Z" fill="currentColor" opacity="0.42"/>
+        <path d="M-12 4 C-16 -8 -6 -16 5 -14 C1 -9 -3 -5 -6 -1 C-9 1 -11 3 -12 4 Z" fill="currentColor" opacity="0.5"/>
+        <path d="M12 4 C16 -8 6 -16 -5 -14 C-1 -9 3 -5 6 -1 C9 1 11 3 12 4 Z" fill="currentColor" opacity="0.5"/>
+        <!-- pétalos medios -->
+        <path d="M0 10 C-9 9 -11 -2 -5 -9 C-1 -6 1 -2 1 2 C1 5 0 8 0 10 Z" fill="currentColor" opacity="0.62"/>
+        <path d="M0 10 C9 9 11 -2 5 -9 C1 -6 -1 -2 -1 2 C-1 5 0 8 0 10 Z" fill="currentColor" opacity="0.62"/>
+        <!-- capullo central en espiral -->
+        <path d="M-5 1 C-6 -5 0 -8 5 -6 C7 -2 5 3 0 4 C-3 4 -4 2 -5 1 Z" fill="currentColor" opacity="0.82"/>
+        <path d="M-3 0 C-3 -3 1 -5 4 -3 C4 -1 2 2 -1 2 C-2 1 -3 1 -3 0 Z" fill="currentColor" opacity="0.95"/>
+        <path d="M-1.5 -1 C-1 -2.5 1.5 -2.5 2 -1 C2 0.5 0.5 1.5 -0.5 1 C-1.2 0.5 -1.5 0 -1.5 -1 Z" fill="#fff" opacity="0.3"/>
+      </g>
+
+      <!-- HOJA (verde oliva suave) -->
+      <g id="leaf">
+        <path d="M0 0 C10 2 16 12 14 24 C4 22 -2 12 0 0 Z" fill="#9cae86" opacity="0.55"/>
+        <path d="M2 4 C6 8 9 14 12 20" fill="none" stroke="#7d8f6a" stroke-width="0.8" opacity="0.4"/>
+      </g>
+
+      <!-- CAPULLO (rosa cerrada) -->
+      <g id="bud">
+        <path d="M0 6 C-5 4 -5 -3 -1 -6 C0 -3 0 0 0 3 Z" fill="currentColor" opacity="0.7"/>
+        <path d="M0 6 C5 4 5 -3 1 -6 C0 -3 0 0 0 3 Z" fill="currentColor" opacity="0.7"/>
+        <path d="M-2 5 C-2 0 0 -4 2 -5 C2 0 1 4 0 6 Z" fill="currentColor" opacity="0.9"/>
+        <path d="M0 12 C-1 9 -1 7 0 6 C1 7 1 9 0 12 Z" fill="currentColor" opacity="0.55"/>
+      </g>
+
+      <!-- RAMO DE ESQUINA: rosas + hojas + follaje curvo -->
+      <g id="floral-spray">
+        <!-- tallo principal curvo -->
+        <path d="M8 112 C34 96 52 74 66 48 C74 32 84 20 104 10" fill="none" stroke="#b39b6f" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+        <path d="M30 96 C40 82 44 66 44 50" fill="none" stroke="#b39b6f" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+        <!-- hojas a lo largo del tallo -->
+        <g transform="translate(26 92) rotate(40) scale(0.9)"><use href="#leaf"/></g>
+        <g transform="translate(52 66) rotate(10) scale(0.85)"><use href="#leaf"/></g>
+        <g transform="translate(40 52) rotate(-150) scale(0.75)"><use href="#leaf"/></g>
+        <g transform="translate(74 40) rotate(-20) scale(0.8)"><use href="#leaf"/></g>
+        <!-- capullos -->
+        <g transform="translate(58 44) rotate(-30) scale(0.9)"><use href="#bud"/></g>
+        <!-- rosas (grande arriba, mediana abajo) -->
+        <g transform="translate(100 16) scale(1.15)"><use href="#rose"/></g>
+        <g transform="translate(70 62) scale(0.85)"><use href="#rose"/></g>
+        <g transform="translate(30 96) scale(0.6)"><use href="#rose"/></g>
+      </g>
+
+      <!-- RAMA HORIZONTAL: rosa central + hojas y capullos a los lados -->
+      <g id="floral-branch">
+        <path d="M6 30 C22 30 30 22 40 22 C50 22 58 30 74 30" fill="none" stroke="#b39b6f" stroke-width="1" stroke-linecap="round" opacity="0.55"/>
+        <g transform="translate(18 28) rotate(140) scale(0.6)"><use href="#leaf"/></g>
+        <g transform="translate(62 28) rotate(40) scale(0.6)"><use href="#leaf"/></g>
+        <g transform="translate(26 26) rotate(180) scale(0.7)"><use href="#bud"/></g>
+        <g transform="translate(54 26) scale(0.7)"><use href="#bud"/></g>
+        <g transform="translate(40 22) scale(0.95)"><use href="#rose"/></g>
+      </g>
+
+      <!-- GUIRNALDA / DIVISOR: follaje horizontal con rosa central -->
+      <g id="floral-divider">
+        <path d="M4 16 C30 16 50 12 92 16" fill="none" stroke="#b39b6f" stroke-width="0.9" opacity="0.5"/>
+        <path d="M196 16 C170 16 150 12 108 16" fill="none" stroke="#b39b6f" stroke-width="0.9" opacity="0.5"/>
+        <g transform="translate(30 16) rotate(150) scale(0.5)"><use href="#leaf"/></g>
+        <g transform="translate(55 16) rotate(170) scale(0.55)"><use href="#leaf"/></g>
+        <g transform="translate(170 16) rotate(30) scale(0.5)"><use href="#leaf"/></g>
+        <g transform="translate(145 16) rotate(10) scale(0.55)"><use href="#leaf"/></g>
+        <g transform="translate(74 16) scale(0.55)"><use href="#bud"/></g>
+        <g transform="translate(126 16) scale(0.55)"><use href="#bud"/></g>
+        <g transform="translate(100 16) scale(1)"><use href="#rose"/></g>
+      </g>
+
+      <!-- GUIRNALDA VERTICAL para el sobre (rosas y hojas) -->
+      <g id="floral-crown">
+        <path d="M60 6 C40 10 26 20 20 40 C34 30 48 28 60 30 C72 28 86 30 100 40 C94 20 80 10 60 6 Z" fill="none" stroke="#b39b6f" stroke-width="1" opacity="0.45"/>
+        <g transform="translate(30 30) rotate(-30) scale(0.7)"><use href="#leaf"/></g>
+        <g transform="translate(90 30) rotate(30) scale(0.7)"><use href="#leaf"/></g>
+        <g transform="translate(20 40) scale(0.6)"><use href="#bud"/></g>
+        <g transform="translate(100 40) scale(0.6)"><use href="#bud"/></g>
+        <g transform="translate(60 16) scale(0.95)"><use href="#rose"/></g>
+        <g transform="translate(38 26) scale(0.55)"><use href="#rose"/></g>
+        <g transform="translate(82 26) scale(0.55)"><use href="#rose"/></g>
+      </g>
+
+      <!-- PÉTALO individual con forma de pétalo de rosa (lluvia al abrir) -->
+      <g id="petal">
+        <path d="M8 0 C15 5 15 17 9 26 C8 24 7 24 6 26 C1 17 1 5 8 0 Z" fill="currentColor"/>
+        <path d="M8 2 C6 9 6 17 8 24" fill="none" stroke="#fff" stroke-width="0.7" opacity="0.3"/>
+      </g>
+    </defs>
+  </svg>
+
+  <!-- ============================================================= -->
+  <!-- SOBRE FÍSICO DIGITAL (pantalla de apertura)                   -->
+  <!-- ============================================================= -->
+  <div class="envelope-stage" id="envelopeStage">
+    <div class="envelope-scene">
+      <div class="envelope" id="envelope" role="button" tabindex="0"
+           aria-expanded="false"
+           aria-label="Toca para abrir la invitación de Fernando y Diana">
+
+        <!-- Tarjeta que sale del sobre -->
+        <div class="env-card" id="envCard">
+          <span class="env-card-mono">F &amp; D</span>
+          <span class="env-card-text">Están invitados</span>
+        </div>
+
+        <!-- Cuerpo del sobre -->
+        <div class="env-back"></div>
+        <div class="env-body">
+          <div class="env-front"></div>
+          <div class="env-monogram">
+            <span class="env-crown" aria-hidden="true">
+              <svg viewBox="0 0 120 60"><use href="#floral-crown"></use></svg>
+            </span>
+            <span class="env-initials">F &amp; D</span>
+            <span class="env-rule"></span>
+            <span class="env-names" id="envNames">Fernando Morales &amp; Diana Mongui</span>
+            <span class="env-flourish" aria-hidden="true">
+              <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+            </span>
+          </div>
+        </div>
+        <!-- Solapa superior (se abre) con sello de rosa -->
+        <div class="env-flap-top" id="envFlapTop">
+          <span class="env-seal" aria-hidden="true">
+            <svg viewBox="0 0 44 44">
+              <circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+              <circle cx="22" cy="22" r="16" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.35"/>
+              <g transform="translate(22 22) scale(0.8)"><use href="#rose"></use></g>
+            </svg>
+          </span>
+        </div>
+
+      </div>
+
+      <p class="env-hint" id="envHint">
+        <span class="env-hint-icon" aria-hidden="true">✦</span>
+        Toca para abrir
+      </p>
+    </div>
+  </div>
+
+  <!-- Lluvia de pétalos (fija sobre la pantalla; se llena por JS al abrir) -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+
+  <!-- ============================================================= -->
+  <!-- INVITACIÓN                                                    -->
+  <!-- ============================================================= -->
+  <main class="invitation" id="invitation" aria-hidden="true">
+
+    <!-- ---------- PORTADA (con foto hero) ---------- -->
+    <section class="section cover" id="cover" aria-label="Portada">
+
+      <!-- Foto grande superior. Si no hay foto, se muestra .cover-hero.is-empty -->
+      <figure class="cover-hero" id="coverHero">
+        <img class="cover-hero-img" id="coverHeroImg" alt="Fernando y Diana" hidden />
+        <div class="cover-hero-placeholder" id="coverHeroPlaceholder" aria-hidden="true">
+          <span class="cover-hero-ph-icon">
+            <svg viewBox="0 0 120 60"><use href="#floral-branch"></use></svg>
+          </span>
+          <span class="cover-hero-ph-text">Su fotografía aquí</span>
+        </div>
+      </figure>
+
+      <div class="cover-inner reveal">
+        <p class="eyebrow">Con alegría en nuestros corazones</p>
+        <h1 class="couple-title">
+          <span class="couple-name couple-name--first">Fernando</span>
+          <span class="couple-name couple-name--second"><span class="amp">&amp;</span>Diana</span>
+        </h1>
+        <p class="cover-quote">Un amor escrito por Dios,<br />vivido con fe y sellado para siempre.</p>
+        <p class="motto">Fe · Amor · Propósito</p>
+        <span class="cover-rings" aria-hidden="true">
+          <img src="assets/images/anillos.png" alt="" class="cover-rings-img" loading="lazy" />
+        </span>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span class="scroll-cue-line"></span>
+      </div>
+    </section>
+
+    <!-- ---------- INVITACIÓN ---------- -->
+    <section class="section invite" id="invite" aria-label="Invitación">
+      <div class="invite-inner reveal">
+        <span class="floral-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+        </span>
+        <p class="invite-eyebrow" id="inviteEyebrow">Con la bendición de Dios y de nuestras familias</p>
+        <figure class="invite-photo" id="invitePhoto" hidden>
+          <img id="invitePhotoImg" src="" alt="" loading="lazy" />
+        </figure>
+        <span class="floral-divider" aria-hidden="true">
+          <svg viewBox="0 0 200 32"><use href="#floral-divider"></use></svg>
+        </span>
+        <p class="invite-text" id="inviteText"></p>
+      </div>
+    </section>
+
+    <!-- ---------- VERSÍCULO ---------- -->
+    <section class="section verse" id="verse" aria-label="Versículo">
+      <div class="verse-inner reveal">
+        <span class="verse-frame" aria-hidden="true">
+          <span class="floral-corner floral-corner--tl"><svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg></span>
+          <span class="floral-corner floral-corner--br"><svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg></span>
+        </span>
+        <span class="floral-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+        </span>
+        <p class="verse-ref" id="verseRef">Eclesiastés 4:12</p>
+        <blockquote class="verse-text" id="verseText"></blockquote>
+      </div>
+    </section>
+
+    <!-- ---------- NUESTRO DÍA ---------- -->
+    <section class="section day" id="day" aria-label="Nuestro día">
+      <span class="floral-corner floral-corner--tl" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg>
+      </span>
+      <span class="floral-corner floral-corner--br" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg>
+      </span>
+      <div class="day-inner reveal">
+        <span class="floral-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+        </span>
+        <h2 class="section-title">Nuestro día</h2>
+        <span class="floral-divider" aria-hidden="true">
+          <svg viewBox="0 0 200 32"><use href="#floral-divider"></use></svg>
+        </span>
+        <div class="day-date" id="dayDate">
+          <span class="dd-weekday" id="ddWeekday">Domingo</span>
+          <div class="dd-main">
+            <span class="dd-side dd-month" id="ddMonth">Noviembre</span>
+            <span class="dd-num" id="ddDay">15</span>
+            <span class="dd-side dd-year" id="ddYear">2026</span>
+          </div>
+        </div>
+        <p class="day-time" id="dayTime">3:00 p. m.</p>
+        <div class="day-place">
+          <p class="day-venue" id="dayVenue"></p>
+          <p class="day-address" id="dayAddress"></p>
+        </div>
+        <a class="btn" id="mapsBtn" href="#" target="_blank" rel="noopener">
+          <span class="btn-icon" aria-hidden="true">◈</span> Cómo llegar
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- RECEPCIÓN (opcional) ---------- -->
+    <section class="section reception" id="reception" aria-label="Recepción" hidden>
+      <div class="reception-inner reveal">
+        <h2 class="section-title">Recepción</h2>
+        <span class="floral-divider" aria-hidden="true">
+          <svg viewBox="0 0 200 32"><use href="#floral-divider"></use></svg>
+        </span>
+        <p class="rec-venue" id="recVenue"></p>
+        <p class="rec-time" id="recTime"></p>
+        <p class="rec-address" id="recAddress"></p>
+        <p class="rec-note" id="recNote"></p>
+        <a class="btn" id="recMapsBtn" href="#" target="_blank" rel="noopener" hidden>
+          <span class="btn-icon" aria-hidden="true">◈</span> Cómo llegar
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- CUENTA REGRESIVA ---------- -->
+    <section class="section countdown" id="countdown" aria-label="Cuenta regresiva">
+      <span class="floral-corner floral-corner--tl" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg>
+      </span>
+      <span class="floral-corner floral-corner--br" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg>
+      </span>
+      <div class="countdown-inner reveal">
+        <span class="floral-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+        </span>
+        <p class="countdown-label">Faltan</p>
+        <div class="countdown-grid" id="countdownGrid" aria-live="polite">
+          <div class="cd-unit"><span class="cd-num" id="cdDays">--</span><span class="cd-word">Días</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cdHours">--</span><span class="cd-word">Horas</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cdMinutes">--</span><span class="cd-word">Minutos</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cdSeconds">--</span><span class="cd-word">Segundos</span></div>
+        </div>
+        <p class="countdown-done" id="countdownDone" hidden>Hoy es nuestro gran día</p>
+      </div>
+    </section>
+
+    <!-- ---------- GALERÍA ---------- -->
+    <section class="section gallery" id="gallery" aria-label="Galería">
+      <div class="gallery-inner reveal">
+        <span class="floral-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+        </span>
+        <h2 class="section-title">Nuestros momentos</h2>
+        <span class="floral-divider" aria-hidden="true">
+          <svg viewBox="0 0 200 32"><use href="#floral-divider"></use></svg>
+        </span>
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <p class="gallery-soon" id="gallerySoon">Muy pronto compartiremos nuestras fotografías.</p>
+      </div>
+    </section>
+
+    <!-- ---------- CONFIRMACIÓN ---------- -->
+    <section class="section rsvp" id="rsvp" aria-label="Confirmación de asistencia">
+      <span class="floral-corner floral-corner--tl" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg>
+      </span>
+      <span class="floral-corner floral-corner--br" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg>
+      </span>
+      <div class="rsvp-inner reveal">
+        <span class="floral-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+        </span>
+        <h2 class="section-title">¿Nos acompañas?</h2>
+        <span class="floral-divider" aria-hidden="true">
+          <svg viewBox="0 0 200 32"><use href="#floral-divider"></use></svg>
+        </span>
+        <p class="rsvp-text">Nos encantaría contar con tu presencia en este día tan especial. Por favor, confirma tu asistencia.</p>
+        <a class="btn btn-solid" id="rsvpBtn" href="#" target="_blank" rel="noopener">
+          <span class="btn-icon" aria-hidden="true">✉</span> Confirmar asistencia
+        </a>
+      </div>
+    </section>
+
+    <!-- ---------- CÓDIGO DE VESTIMENTA ---------- -->
+    <section class="section dresscode" id="dresscode" aria-label="Código de vestimenta">
+      <div class="dresscode-inner reveal">
+        <span class="floral-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+        </span>
+        <p class="dc-label">Código de vestimenta</p>
+        <p class="dc-title" id="dcTitle">Elegante</p>
+        <span class="floral-divider" aria-hidden="true">
+          <svg viewBox="0 0 200 32"><use href="#floral-divider"></use></svg>
+        </span>
+        <p class="dc-note" id="dcNote">El blanco está reservado exclusivamente para la novia.</p>
+      </div>
+    </section>
+
+    <!-- ---------- LLUVIA DE SOBRES ---------- -->
+    <section class="section gifts" id="gifts" aria-label="Lluvia de sobres">
+      <div class="gifts-inner reveal">
+        <span class="floral-icon" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+        </span>
+        <h2 class="section-title">Sugerencia de Regalo</h2>
+        <span class="floral-divider" aria-hidden="true">
+          <svg viewBox="0 0 200 32"><use href="#floral-divider"></use></svg>
+        </span>
+        <p class="gifts-text">
+          El mejor regalo es tu presencia, pero si deseas tener un detalle
+          con nosotros, será de gran bendición:
+        </p>
+
+        <div class="gifts-envelope" aria-hidden="true">
+          <svg viewBox="0 0 64 46">
+            <rect x="3" y="6" width="58" height="38" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M3 9 L32 28 L61 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <g transform="translate(32 15) scale(0.5)"><use href="#rose"></use></g>
+          </svg>
+        </div>
+        <p class="gifts-tag">Lluvia de Sobres</p>
+
+        <div class="gifts-bank" id="giftsBank" hidden>
+          <dl class="bank-list">
+            <div class="bank-row"><dt>Banco</dt><dd id="bankName"></dd></div>
+            <div class="bank-row"><dt>Tipo de cuenta</dt><dd id="bankType"></dd></div>
+            <div class="bank-row"><dt>Número</dt><dd id="bankNumber"></dd></div>
+            <div class="bank-row"><dt>Titular</dt><dd id="bankHolder"></dd></div>
+            <div class="bank-row" id="bankExtraRow"><dt>Información</dt><dd id="bankExtra"></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- AGRADECIMIENTO ---------- -->
+    <section class="section thanks" id="thanks" aria-label="Agradecimiento">
+      <span class="floral-corner floral-corner--tl" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg>
+      </span>
+      <span class="floral-corner floral-corner--br" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><use href="#floral-spray"></use></svg>
+      </span>
+      <div class="thanks-inner reveal">
+        <span class="rose-top" aria-hidden="true">
+          <svg viewBox="0 0 80 60"><use href="#floral-branch"></use></svg>
+        </span>
+        <h2 class="thanks-title">Gracias por ser parte<br />de este momento</h2>
+        <p class="thanks-text">
+          Gracias por acompañarnos en el comienzo de esta nueva etapa de nuestras vidas.
+          Nos llena de alegría poder compartir este día tan especial con las personas que amamos.
+        </p>
+        <p class="thanks-signature">Fernando &amp; Diana</p>
+        <p class="motto">Fe · Amor · Propósito</p>
+      </div>
+    </section>
+
+    <!-- Crédito del diseñador (discreto, enlaza a WhatsApp) -->
+    <footer class="credit">
+      <a class="credit-link" id="creditLink" href="#" target="_blank" rel="noopener">
+        <span class="credit-mark" aria-hidden="true">✦</span>
+        Diseñado con amor por <strong>OracleTech</strong>
+      </a>
+    </footer>
+
+  </main>
+
+  <!-- Botón de música (aparece tras abrir el sobre) -->
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Reproducir música" hidden>
+    <span class="music-icon" id="musicIcon" aria-hidden="true">▶</span>
+  </button>
+  <audio id="audioPlayer" loop preload="none"></audio>
+
+  <!-- Lightbox de la galería (visor de fotos ampliadas) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotografía ampliada" hidden>
+    <button class="lb-close" id="lbClose" type="button" aria-label="Cerrar">&times;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Anterior">&#8249;</button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption class="lb-counter" id="lbCounter"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Siguiente">&#8250;</button>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
